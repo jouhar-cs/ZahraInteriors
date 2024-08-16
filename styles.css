@@ -1,4 +1,4 @@
-/* Created by Tivotal */
+/* Created by JVR */
 
 /* Google Fonts(Poppins) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -505,3 +505,98 @@ textarea {
     width: 30rem;
   }
 }
+/* CSS */
+.info h2 {
+  text-align: center;
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #000000; /* Black color */
+  margin: 2rem 0; /* Adjust margin to create space around the heading */
+}
+/* styles.css */
+
+.hero .text1, .hero .text2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.8s ease-out forwards;
+}
+
+.hero .text2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* styles.css */
+
+.about .image img {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 1.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+/* styles.css */
+
+.service .box {
+  transition: transform 0.6s ease, background-color 0.6s ease;
+}
+
+.service .box:hover {
+  transform: scale(1.05);
+  background-color: #f1f1f1;
+}
+/* styles.css */
+
+.project .box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.project .box:nth-child(1) { animation-delay: 0.4s; }
+.project .box:nth-child(2) { animation-delay: 0.6s; }
+.project .box:nth-child(3) { animation-delay: 0.8s; }
+.project .box:nth-child(4) { animation-delay: 0.1s; }
+.project .box:nth-child(5) { animation-delay: 1.2s; }
+.project .box:nth-child(6) { animation-delay: 1.4s; }
+
+@keyframes fadeUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* styles.css */
+
+html {
+  scroll-behavior: smooth;
+}
+/* styles.css */
+
+.footer .row > div {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.footer .row > div:nth-child(1) { animation-delay: 0.4s; }
+.footer .row > div:nth-child(2) { animation-delay: 0.6s; }
+.footer .row > div:nth-child(3) { animation-delay: 0.8s; }
+.footer .row > div:nth-child(4) { animation-delay: 1s; }
+
+/* Increase the size and bold text inside <strong> tags */
+.service .box p strong {
+  font-size: 1.2em; /* Adjust the size as needed */
+  font-weight: bold; /* Ensure the text is bold */
+}
+
