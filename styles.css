@@ -38,6 +38,10 @@ body {
   font-size: 3rem;
   font-weight: 600;
 }
+.header .logo img {
+  max-height: 40px; /* Adjust this value as needed */
+  width: auto;
+}
 
 .header nav ul {
   display: flex;
@@ -70,11 +74,13 @@ body {
 
 .home .hero {
   min-height: 60vh;
-  background: url(homeimage.jpg) no-repeat;
+  background: url(homepage.jfif) no-repeat;
+  height: 100vh; /* Adjust this if you don't want full height */
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Aligns the content to the top */
+  align-items: flex-start;
 }
 
 .home .row {
@@ -82,26 +88,19 @@ body {
 }
 
 .home .hero .text1 {
-  font-size: 5rem;
-  width: 45rem;
-  background: #fff;
-  padding: 1rem;
+  font-size: 4rem;
+  color: white;
   text-align: center;
   opacity: 0.8;
-  border-radius: 0 1rem 1rem 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: flex-start; /* Aligns content to the top */
+  height: 100%; /* Ensure it takes up the full height of the container */
+  width: 100%; /* Ensure it takes up the full width of the container */
+  margin: 0; /* Removes any margin that could offset the centering */
+  padding: 100px 0; /* Optional: Adds some padding at the top */
 }
 
-.home .hero .text2 {
-  font-size: 3rem;
-  width: 35rem;
-  background: #4070f4;
-  padding: 1rem;
-  text-align: center;
-  opacity: 0.8;
-  margin-top: 1rem;
-  color: #fff;
-  border-radius: 0 1rem 1rem 0;
-}
 
 .home .counting {
   min-height: 40vh;
@@ -127,10 +126,6 @@ body {
   color: #4070f4;
 }
 
-.about {
-  min-height: 100vh;
-  padding-bottom: 3rem;
-}
 
 .heading {
   font-size: 4rem;
@@ -142,25 +137,16 @@ body {
   text-decoration: underline !important;
 }
 
-.about .image {
-  padding: 2rem;
-}
-
-.about .image img {
-  height: 45rem;
-  object-fit: cover;
-  box-shadow: 2.5rem 2.5rem 0 1rem #4070f4;
-  border-radius: 1rem;
-}
 
 .about .info {
   padding: 2rem;
-  margin-top: 3rem;
+  margin-top: 0rem;
 }
 
 .about .info h2 {
   color: #4070f4;
   font-size: 3rem;
+  justify-content: center;
 }
 
 .about .info p {
@@ -216,8 +202,8 @@ body {
 
 .service .box-container .box p {
   color: #333;
-  font-size: 1.1rem;
-  margin: 2rem 0;
+  font-size: 1.5rem;
+  margin: 0rem 0;
 }
 
 .project {
@@ -228,6 +214,11 @@ body {
 .project .heading {
   color: #fff;
 }
+.project h1 {
+  color: white;
+  padding-left: 100px; /* Adjust the value as needed */
+}
+
 
 .project .box-container {
   display: flex;
@@ -243,15 +234,38 @@ body {
   overflow: hidden;
   box-shadow: 0 0.3rem 0.5rem #000;
 }
-
-.project .box-container .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.project .box-container .box a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 1rem; /* Adds padding around the text */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem; /* Optional: adds rounded corners to the overlay */
+  z-index: 1; /* Ensures the overlay is above the image */
 }
 
 .project .box-container .box:hover img {
   transform: scale(1.3);
+}
+.box {
+  position: relative; /* Allows absolute positioning for the overlay */
+  overflow: hidden; /* Ensures content doesn't overflow outside the box */
+}
+
+.box a {
+  display: block; /* Makes the entire area clickable */
+  position: relative; /* Ensures the overlay is positioned relative to this */
+}
+
+.box img {
+  display: block; /* Removes any extra space below the image */
+  width: 30rem;
+  height: 20rem; /* Maintains aspect ratio */
 }
 
 .contact {
@@ -599,4 +613,20 @@ html {
   font-size: 1.2em; /* Adjust the size as needed */
   font-weight: bold; /* Ensure the text is bold */
 }
+
+.team-member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+
+
+
 

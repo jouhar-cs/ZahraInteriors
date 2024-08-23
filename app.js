@@ -32,13 +32,4 @@ $(document).ready(function () {
       }
     );
   });
-
-  // Magnific Popup for project images
-  $(".project").magnificPopup({
-    delegate: "a",
-    type: "image",
-    gallery: {
-      enabled: true,
-    },
-  });
 });
